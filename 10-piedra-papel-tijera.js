@@ -25,11 +25,11 @@ function pickComputerMove() {
   let computerMove = "";
 
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    computerMove = "Piedra";
+    computerMove = "piedra";
   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    computerMove = "Papel";
+    computerMove = "papel";
   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-    computerMove = "Tijera";
+    computerMove = "tijera";
   }
 
   return computerMove;
@@ -39,28 +39,28 @@ function playGame(playerMove) {
   const computerMove = pickComputerMove();
 
   let resultado = "";
-  if (playerMove === "Tijera") {
-    if (computerMove === "Piedra") {
+  if (playerMove === "tijera") {
+    if (computerMove === "piedra") {
       resultado = "PERDISTE";
-    } else if (computerMove === "Papel") {
+    } else if (computerMove === "papel") {
       resultado = "GANASTE";
-    } else if (computerMove === "Tijera") {
+    } else if (computerMove === "tijera") {
       resultado = "EMPATE";
     }
-  } else if (playerMove === "Papel") {
-    if (computerMove === "Piedra") {
+  } else if (playerMove === "papel") {
+    if (computerMove === "piedra") {
       resultado = "GANASTE";
-    } else if (computerMove === "Papel") {
+    } else if (computerMove === "papel") {
       resultado = "EMPATE";
-    } else if (computerMove === "Tijera") {
+    } else if (computerMove === "tijera") {
       resultado = "PERDISTE";
     }
-  } else if (playerMove === "Piedra") {
-    if (computerMove === "Piedra") {
+  } else if (playerMove === "piedra") {
+    if (computerMove === "piedra") {
       resultado = "EMPATE";
-    } else if (computerMove === "Papel") {
+    } else if (computerMove === "papel") {
       resultado = "PERDISTE";
-    } else if (computerMove === "Tijera") {
+    } else if (computerMove === "tijera") {
       resultado = "GANASTE";
     }
   }
@@ -82,8 +82,8 @@ function playGame(playerMove) {
   document.querySelector(".js-result").innerHTML = resultado;
 
   document.querySelector(".js-moves").innerHTML = `Vos
-<img src="./img/${playerMove.toLowerCase()}-emoji.png" class="move-icon">
-<img src="./img/${computerMove.toLowerCase()}-emoji.png" class="move-icon">
+<img src="./img/${playerMove}-emoji.png" class="move-icon">
+<img src="./img/${computerMove}-emoji.png" class="move-icon">
 Computadora`;
 
   `Elegiste ${playerMove} - Computadora eligio ${computerMove}.`;

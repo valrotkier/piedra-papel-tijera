@@ -96,8 +96,8 @@ function playGame(playerMove) {
 
     document.querySelector('.js-moves').innerHTML =
         `Vos
-<img src="/img/${playerMove}-emoji.png" class="move-icon">
-<img src="/img/${computerMove}-emoji.png" class="move-icon">
+<img src="./img/${playerMove}-emoji.png" class="move-icon">
+<img src="./img/${computerMove}-emoji.png" class="move-icon">
 Computadora`;
 
     `Elegiste ${playerMove} - Computadora eligio ${computerMove}.`;
